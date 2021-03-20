@@ -2,6 +2,7 @@
 
 <?php
     mkdir("heroku-folder");
+$myfile = fopen("heroku-folder/testfile.txt", "w")
 echo "folder-heroku";
 ?>
 
