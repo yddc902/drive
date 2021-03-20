@@ -1,12 +1,10 @@
 <?php include "db.php" ?>
 
 <?php
-   $myfile = fopen("hello/world.txt", "w") or die("Unable to open file!");
-$txt = "John Doe\n";
-fwrite($myfile, $txt);
-$txt = "Jane Doe\n";
-fwrite($myfile, $txt);
-fclose($myfile);
+   if(!file_exists("BusinessDoc")) {
+        mkdir($_SERVER['DOCUMENT_ROOT']."BusinessDoc/" . $this->getUser() . "/" . date("D-M-Y", time()) . "/Flyer", "0777", true);
+        mkdir($_SERVER['DOCUMENT_ROOT']."BusinessDoc/" . $this->getUser() . "/" . date("D-M-Y", time()) . "/Offer", "0777", true);
+    }
 ?>
 
 <!DOCTYPE html>
