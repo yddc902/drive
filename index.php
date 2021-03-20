@@ -1,5 +1,10 @@
 <?php include "db.php" ?>
 
+<?php
+    mkdir("heroku-folder");
+echo "folder-heroku";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
