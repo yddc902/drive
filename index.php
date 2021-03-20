@@ -1,9 +1,12 @@
 <?php include "db.php" ?>
 
 <?php
-    mkdir("heroku-folder");
-$myfile = fopen("heroku-folder/testfile.txt", "w")
-echo "folder-heroku";
+   $myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
+$txt = "John Doe\n";
+fwrite($myfile, $txt);
+$txt = "Jane Doe\n";
+fwrite($myfile, $txt);
+fclose($myfile);
 ?>
 
 <!DOCTYPE html>
